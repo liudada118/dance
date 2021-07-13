@@ -245,50 +245,50 @@ function createScene()
 		
 	// we iterate 10x (5x each side) to create pillars to show off shadows
 	// this is for the pillars on the left
-	for (var i = 0; i < 5; i++)
-	{
-		var backdrop = new THREE.Mesh(
+	// for (var i = 0; i < 5; i++)
+	// {
+	// 	var backdrop = new THREE.Mesh(
 		
-		  new THREE.CubeGeometry( 
-		  30, 
-		  30, 
-		  300, 
-		  1, 
-		  1,
-		  1 ),
+	// 	  new THREE.CubeGeometry( 
+	// 	  30, 
+	// 	  30, 
+	// 	  300, 
+	// 	  1, 
+	// 	  1,
+	// 	  1 ),
 
-		  pillarMaterial);
+	// 	  pillarMaterial);
 		  
-		backdrop.position.x = -50 + i * 100;
-		backdrop.position.y = 230;
-		backdrop.position.z = -30;		
-		backdrop.castShadow = true;
-		backdrop.receiveShadow = true;		  
-		scene.add(backdrop);	
-	}
+	// 	backdrop.position.x = -50 + i * 100;
+	// 	backdrop.position.y = 230;
+	// 	backdrop.position.z = -30;		
+	// 	backdrop.castShadow = true;
+	// 	backdrop.receiveShadow = true;		  
+	// 	scene.add(backdrop);	
+	// }
 	// we iterate 10x (5x each side) to create pillars to show off shadows
 	// this is for the pillars on the right
-	for (var i = 0; i < 5; i++)
-	{
-		var backdrop = new THREE.Mesh(
+	// for (var i = 0; i < 5; i++)
+	// {
+	// 	var backdrop = new THREE.Mesh(
 
-		  new THREE.CubeGeometry( 
-		  30, 
-		  30, 
-		  300, 
-		  1, 
-		  1,
-		  1 ),
+	// 	  new THREE.CubeGeometry( 
+	// 	  30, 
+	// 	  30, 
+	// 	  300, 
+	// 	  1, 
+	// 	  1,
+	// 	  1 ),
 
-		  pillarMaterial);
+	// 	  pillarMaterial);
 		  
-		backdrop.position.x = -50 + i * 100;
-		backdrop.position.y = -230;
-		backdrop.position.z = -30;
-		backdrop.castShadow = true;
-		backdrop.receiveShadow = true;		
-		scene.add(backdrop);	
-	}
+	// 	backdrop.position.x = -50 + i * 100;
+	// 	backdrop.position.y = -230;
+	// 	backdrop.position.z = -30;
+	// 	backdrop.castShadow = true;
+	// 	backdrop.receiveShadow = true;		
+	// 	scene.add(backdrop);	
+	// }
 	
 	// finally we finish by adding a ground plane
 	// to show off pretty shadows
@@ -306,7 +306,7 @@ function createScene()
     // set ground to arbitrary z position to best show off shadowing
 	ground.position.z = -132;
 	ground.receiveShadow = true;	
-	scene.add(ground);		
+	// scene.add(ground);		
 		
 	// // create a point light
 	pointLight =

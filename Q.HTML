@@ -29,18 +29,20 @@
 
 <body onload='setup();'>
 	<div id='gameCanvas'></div>
-	<video id="video" width="250" autoplay='autoplay' 
+	<video id="video" width="250" muted='muted'  autoplay='autoplay' 
 	>
-		<!-- controlsList='nofullscreen nodownload noremote footbar'  muted='true'  controls-->
+		
 		<source src="./video/video.mp4" type="video/webm">
 
 		<source src="./video/video.mp4" type="video/mp4">
 
 		Sorry, your browser doesn't support embedded videos.
 	</video>
-
+	<!-- <iframe  src="./video/video.mp4" frameborder="0" allow='autoplay' ></iframe> -->
 	<!-- <script src='./Scripts/three.min.js'></script> -->
-	<script src="https://cdn.bootcdn.net/ajax/libs/three.js/r83/three.min.js"></script>
+	<!-- <script src="https://cdn.bootcdn.net/ajax/libs/three.js/r83/three.min.js"></script> -->
+	<!-- <script src='./Scripts/three.min.js'></script> -->
+	<script src="https://cdn.bootcdn.net/ajax/libs/three.js/r90/three.js"></script>
 	<script src='./Scripts/keyboard.js'></script>
 	<script src='./Scripts/GA.js'></script>
 
