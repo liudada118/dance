@@ -16,7 +16,7 @@ var startFlag = false
 var textmesh, missmesh
 var newSpeed
 let timerA, timerB, timerC, timerD, timerE
-var circle,circle1,circle2,circle3,circle4
+var circle, circle1, circle2, circle3, circle4
 let bpm = [0,
 	[2, 4], 3, [2, 4], 3, [1, 3], 3, [3,], 3, [2, 4], 3, [2, 4], 3, [1, 3], 3, [3,], 3, [2, 4], 3, [2, 4], 3, [1, 3], 3, [3,], 3, [2, 4], 3, [2, 4], 3, [1, 3], 3, [3,]]
 let bpmArr = [1, 29, 60, 90, 121, 151, 180, 211, 237, 266, 297, 327, 355, 385, 414, 446, 473, 501, 532, 563, 591, 619, 649, 682, 710, 741, 769, 798, 827, 859, 886, 917]
@@ -292,13 +292,13 @@ function createScene() {
 		// console.log(videoLeft.muted)
 	}
 	const geometry = new THREE.PlaneGeometry(200, 112);
-	
+
 	const trackWidth = 600
 	const trackHeight = 130
 	const trackDepth = 10
 
 
-	const Ttexture = new THREE.TextureLoader().load( "./images/track.png" );
+	const Ttexture = new THREE.TextureLoader().load("./images/track.png");
 
 	track = new THREE.Mesh(
 
@@ -312,7 +312,7 @@ function createScene() {
 				// color: 0x666666,
 				transparent: true,
 				opacity: 0,
-				map : Ttexture
+				map: Ttexture
 			})
 	);
 
@@ -322,7 +322,7 @@ function createScene() {
 	track.castShadow = true;
 	track.position.x = -200;
 	track.position.y = 80
-	track.position.z = 301*Math.sqrt(3)
+	track.position.z = 301 * Math.sqrt(3)
 	track.rotation.z = Math.PI / 2
 	track.rotation.x = -Math.PI * 1 / 3
 
@@ -338,7 +338,7 @@ function createScene() {
 				// color: 0x666666,
 				transparent: true,
 				opacity: 0,
-				map : Ttexture
+				map: Ttexture
 			})
 	);
 
@@ -348,7 +348,7 @@ function createScene() {
 	track1.castShadow = true;
 	track1.position.x = -67;
 	track1.position.y = 80
-	track1.position.z = 301*Math.sqrt(3)
+	track1.position.z = 301 * Math.sqrt(3)
 	track1.rotation.z = Math.PI / 2
 	track1.rotation.x = -Math.PI * 1 / 3
 
@@ -364,7 +364,7 @@ function createScene() {
 				// color: 0x666666,
 				transparent: true,
 				opacity: 0,
-				map : Ttexture
+				map: Ttexture
 			})
 	);
 
@@ -374,7 +374,7 @@ function createScene() {
 	track2.castShadow = true;
 	track2.position.x = 67;
 	track2.position.y = 80
-	track2.position.z = 301*Math.sqrt(3)
+	track2.position.z = 301 * Math.sqrt(3)
 	track2.rotation.z = Math.PI / 2
 	track2.rotation.x = -Math.PI * 1 / 3
 
@@ -391,7 +391,7 @@ function createScene() {
 				// color: 0x666666,
 				transparent: true,
 				opacity: 0,
-				map : Ttexture
+				map: Ttexture
 			})
 	);
 
@@ -401,7 +401,7 @@ function createScene() {
 	track3.castShadow = true;
 	track3.position.x = 200;
 	track3.position.y = 80
-	track3.position.z = 301*Math.sqrt(3)
+	track3.position.z = 301 * Math.sqrt(3)
 	track3.rotation.z = Math.PI / 2
 	track3.rotation.x = -Math.PI * 1 / 3
 
@@ -414,8 +414,8 @@ function createScene() {
 	paddleDepth = 20;
 	paddleQuality = 1;
 
-	
-	
+
+
 	// const ball4 = new THREE.Mesh(
 
 	// 	new THREE.BoxGeometry(
@@ -447,15 +447,15 @@ function createScene() {
 	const newWidth = 12
 	const newHeight = 37
 	const newDepth = 5
-	newSpeed = 324 / 30/4
+	newSpeed = 324 / 30 / 4
 	const deliy = 1.0    //延迟
 	const startY = 297
 	const startZ = 301
-	const Boxtexture = new THREE.TextureLoader().load( "./images/box.png" );
+	const Boxtexture = new THREE.TextureLoader().load("./images/box.png");
 	// const Boxtexture = new THREE.TextureLoader().load( "./images/top.png" );
 	// const Boxtexture1 = new THREE.TextureLoader().load( "./images/left.png" );
 	// const Boxtextures = [Boxtexture ,Boxtexture1,Boxtexture ,Boxtexture1,Boxtexture ,Boxtexture1, ]
-	
+
 	for (let i = 1; i < bpm.length; i++) {
 		if (typeof bpm[i] == 'number') {
 			const ball4 = new THREE.Mesh(
@@ -469,11 +469,11 @@ function createScene() {
 				new THREE.MeshBasicMaterial(
 					{
 						// color: 0x00a8e2, 
-						refractionRatio: 0.98, 
-						reflectivity: 0.9, 
+						refractionRatio: 0.98,
+						reflectivity: 0.9,
 						// opacity: 0.8,
 						transparent: true,
-						map : Boxtexture
+						map: Boxtexture
 					}));
 			scene.add(ball4);
 
@@ -501,15 +501,15 @@ function createScene() {
 					new THREE.MeshBasicMaterial(
 						{
 							// color: 0x00a8e2,
-							 refractionRatio: 0.98, reflectivity: 0.9,
+							refractionRatio: 0.98, reflectivity: 0.9,
 							//  opacity: 0.8,
-							transparent: true,map : Boxtexture
-							
+							transparent: true, map: Boxtexture
+
 						}));
 				scene.add(ball4);
 				// ball4.position.z = radius;
-				ball4.position.y = startY + (bpmArr[i - 1] -1) * newSpeed
-				ball4.position.z = (startZ - (bpmArr[i - 1] -1) * newSpeed) * Math.sqrt(3)
+				ball4.position.y = startY + (bpmArr[i - 1] - 1) * newSpeed
+				ball4.position.z = (startZ - (bpmArr[i - 1] - 1) * newSpeed) * Math.sqrt(3)
 
 				ball4.position.x = bpm[i][j] == 1 ? -64 : bpm[i][j] == 2 ? -22 : bpm[i][j] == 3 ? 22 : bpm[i][j] == 4 ? 64 : 0
 
@@ -526,64 +526,107 @@ function createScene() {
 	boxArr = scene.children.filter((a, index) => {
 		return a.geometry && a.geometry.type == 'BoxGeometry' && a.geometry.parameters.width == 12
 	})
-	const loader = new THREE.FontLoader();
+	// const loader = new THREE.FontLoader();
 
-	loader.load('font/a.json', function (font) {
+	// loader.load('font/a.json', function (font) {
 
-		const text = new THREE.TextGeometry('good', {
-			font: font,
-			size: 100,
-			height: 5,
-			curveSegments: 12,
-			bevelEnabled: true,
-			bevelThickness: 10,
-			bevelSize: 1,
-			bevelOffset: 0,
-			bevelSegments: 5
-		});
-		// materialargs.color = new THREE.Color().setHSL( Math.random(), 0.5, 0.5 );
-		const material = new THREE.MeshBasicMaterial({
-			transparent: true,
-			opacity: 0
-		});
-		textmesh = new THREE.Mesh(text, material);
+	// 	const text = new THREE.TextGeometry('213', {
+	// 		font: font,
+	// 		size: 100,
+	// 		height: 20,
+	// 		curveSegments: 12,
+	// 		bevelEnabled: true,
+	// 		bevelThickness: 10,
+	// 		bevelSize: 1,
+	// 		bevelOffset: 0,
+	// 		bevelSegments: 5
+	// 	});
+	// 	// materialargs.color = new THREE.Color().setHSL( Math.random(), 0.5, 0.5 );
+	// 	const material = new THREE.MeshBasicMaterial({
+	// 		transparent: true,
+	// 		opacity: 1
+	// 	});
+	// 	textmesh = new THREE.Mesh(text, material);
 
-		scene.add(textmesh)
-		// textmesh.rotation.x = Math.PI / 2
-		// textmesh.rotation.y = -Math.PI / 2
-		// textmesh.rotation.z = -Math.PI/2
-		textmesh.position.z = 200
-		textmesh.position.y = 30
+	// 	scene.add(textmesh)
+	// 	// textmesh.rotation.x = Math.PI / 2
+	// 	// textmesh.rotation.y = -Math.PI / 2
+	// 	// textmesh.rotation.x =- Math.PI * 1 / 6
+	// 	textmesh.rotation.x = Math.PI/6
+	// 	textmesh.position.z = 200
+	// 	textmesh.position.y = 30
+	// 	textmesh.position.x = -150
+	// });
+
+	const preTexture = new THREE.TextureLoader().load("./images/prefect.png");
+	const preGeometry = new THREE.PlaneGeometry(748, 181);
+	const preMaterial = new THREE.MeshBasicMaterial({
+		transparent: true,
+		opacity: 0,
+		map: preTexture
 	});
+	textmesh = new THREE.Mesh(preGeometry, preMaterial);
+
+	scene.add(textmesh)
+	// textmesh.rotation.x = Math.PI / 2
+	// textmesh.rotation.y = -Math.PI / 2
+	// textmesh.rotation.x =- Math.PI * 1 / 6
+	textmesh.rotation.x = Math.PI / 6
+	textmesh.position.z = 200
+	textmesh.position.y = 30
+	textmesh.position.x = -150
 
 	// miss
-	loader.load('font/a.json', function (font) {
 
-		const text = new THREE.TextGeometry('miss', {
-			font: font,
-			size: 200,
-			height: 5,
-			curveSegments: 12,
-			bevelEnabled: true,
-			bevelThickness: 10,
-			bevelSize: 1,
-			bevelOffset: 0,
-			bevelSegments: 5
-		});
-		// materialargs.color = new THREE.Color().setHSL( Math.random(), 0.5, 0.5 );
-		const material = new THREE.MeshLambertMaterial({
-			transparent: true,
-			opacity: 0
-		});
-		missmesh = new THREE.Mesh(text, material);
 
-		scene.add(missmesh)
-		// missmesh.rotation.x = Math.PI / 2
-		// missmesh.rotation.y = -Math.PI / 2
-		// missmesh.rotation.z = -Math.PI/2
-		missmesh.position.z = 20
-		missmesh.position.y = 30
+
+	// loader.load('font/a.json', function (font) {
+
+	// 	const text = new THREE.TextGeometry('miss', {
+	// 		font: font,
+	// 		size: 100,
+	// 		height: 5,
+	// 		curveSegments: 12,
+	// 		bevelEnabled: true,
+	// 		bevelThickness: 10,
+	// 		bevelSize: 1,
+	// 		bevelOffset: 0,
+	// 		bevelSegments: 5
+	// 	});
+	// 	// materialargs.color = new THREE.Color().setHSL( Math.random(), 0.5, 0.5 );
+	// 	const material = new THREE.MeshLambertMaterial({
+	// 		color : 0xff0000 ,
+	// 		transparent: true,
+	// 		opacity: 0
+	// 	});
+	// 	missmesh = new THREE.Mesh(text, material);
+
+	// 	scene.add(missmesh)
+	// 	// missmesh.rotation.x = Math.PI / 2
+	// 	// missmesh.rotation.y = -Math.PI / 2
+	// 	// missmesh.rotation.z = -Math.PI/2
+	// 	missmesh.position.z = 200
+	// 	missmesh.position.y = 30
+	// 	missmesh.position.x = -150
+	// });
+	const missTexture = new THREE.TextureLoader().load("./images/miss.png");
+	const missGeometry = new THREE.PlaneGeometry(455, 181);
+	const msissMaterial = new THREE.MeshLambertMaterial({
+		color: 0xff0000,
+		transparent: true,
+		opacity: 0,
+		map: missTexture
 	});
+	missmesh = new THREE.Mesh(missGeometry, msissMaterial);
+
+	scene.add(missmesh)
+	// missmesh.rotation.x = Math.PI / 2
+	// missmesh.rotation.y = -Math.PI / 2
+	// missmesh.rotation.z = -Math.PI/2
+	missmesh.rotation.x = Math.PI / 6
+	missmesh.position.z = 200
+	missmesh.position.y = 30
+	missmesh.position.x = -150
 
 	// text = new THREE.TextGeometry( 'Hello three.js!', {
 	// 	// font: font,
@@ -598,7 +641,7 @@ function createScene() {
 	// } );
 
 
-	const Btexture = new THREE.TextureLoader().load( "./images/circle.png" );
+	const Btexture = new THREE.TextureLoader().load("./images/circle.png");
 	const circleWidth = 200
 	const circleHeight = 200
 	circle = new THREE.Mesh(
@@ -613,7 +656,7 @@ function createScene() {
 				// color: 0x666666,
 				transparent: true,
 				opacity: 0,
-				map : Btexture
+				map: Btexture
 			})
 	);
 
@@ -623,7 +666,7 @@ function createScene() {
 	circle.castShadow = true;
 	circle.position.x = -372;
 	circle.position.y = -170
-	circle.position.z = 290*Math.sqrt(3)
+	circle.position.z = 290 * Math.sqrt(3)
 	circle.rotation.z = Math.PI / 2
 	circle.rotation.x = -Math.PI * 1 / 3
 
@@ -639,7 +682,7 @@ function createScene() {
 				// color: 0x666666,
 				transparent: true,
 				opacity: 0,
-				map : Btexture
+				map: Btexture
 			})
 	);
 
@@ -649,7 +692,7 @@ function createScene() {
 	circle1.castShadow = true;
 	circle1.position.x = -123;
 	circle1.position.y = -170
-	circle1.position.z = 290*Math.sqrt(3)
+	circle1.position.z = 290 * Math.sqrt(3)
 	circle1.rotation.z = Math.PI / 2
 	circle1.rotation.x = -Math.PI * 1 / 3
 
@@ -665,7 +708,7 @@ function createScene() {
 				// color: 0x666666,
 				transparent: true,
 				opacity: 0,
-				map : Btexture
+				map: Btexture
 			})
 	);
 
@@ -675,7 +718,7 @@ function createScene() {
 	circle2.castShadow = true;
 	circle2.position.x = 123;
 	circle2.position.y = -170
-	circle2.position.z = 290*Math.sqrt(3)
+	circle2.position.z = 290 * Math.sqrt(3)
 	circle2.rotation.z = Math.PI / 2
 	circle2.rotation.x = -Math.PI * 1 / 3
 
@@ -692,7 +735,7 @@ function createScene() {
 				// color: 0x666666,
 				transparent: true,
 				opacity: 0,
-				map : Btexture
+				map: Btexture
 			})
 	);
 
@@ -702,7 +745,7 @@ function createScene() {
 	circle3.castShadow = true;
 	circle3.position.x = 372;
 	circle3.position.y = -170
-	circle3.position.z = 290*Math.sqrt(3)
+	circle3.position.z = 290 * Math.sqrt(3)
 	circle3.rotation.z = Math.PI / 2
 	circle3.rotation.x = -Math.PI * 1 / 3
 
@@ -779,11 +822,36 @@ function run(ball) {
 
 
 	boxArr.forEach((a, index) => {
-console.log(a.position.x)
-		
+		// console.log(a.position.x)
 
+		if (circle.material.opacity == 1) {
+			// circle.scale.z += 0.001
+			circle.scale.x += 0.001
+			circle.scale.y += 0.001
+			// console.log(circle)
+		}
 
-		if (a.position.y >= -27 && a.position.y <= -27 + 5*newSpeed) {
+		if (circle1.material.opacity == 1) {
+			// circle1.scale.z += 0.001
+			circle1.scale.x += 0.001
+			circle1.scale.y += 0.001
+			// console.log(circle)
+		}
+
+		if (circle2.material.opacity == 1) {
+			// circle2.scale.z += 0.001
+			circle2.scale.x += 0.001
+			circle2.scale.y += 0.001
+			// console.log(circle)
+		}
+		if (circle3.material.opacity == 1) {
+			// circle3.scale.z += 0.001
+			circle3.scale.x += 0.001
+			circle3.scale.y += 0.001
+			// console.log(circle)
+		}
+
+		if (a.position.y >= -27 && a.position.y <= -27 + 5 * newSpeed) {
 			// A按键
 			// a.material.opacity = 1
 			// if (a.position.x == -75) {
@@ -796,7 +864,7 @@ console.log(a.position.x)
 			if (a.position.x == -64) {
 				// console.log('jinle2',textmesh.material.opacity)
 				if (Key.isDown(Key.A)) {
-					
+
 					// console.log('jinle')
 					if (goodFlagA) {
 						console.log('80-50', goodFlagA)
@@ -810,11 +878,13 @@ console.log(a.position.x)
 								// console.log(false, timerA)
 								textmesh.material.opacity = 0
 								circle.material.opacity = 0
+								circle.scale.x = 1
+								circle.scale.y = 1
 								// goodFlag = tru
 
 								clearTimeout(timerA)
 								timerA = null
-							}, 100)
+							}, 400)
 						}
 					}
 
@@ -846,11 +916,13 @@ console.log(a.position.x)
 								console.log(false, timerB)
 								textmesh.material.opacity = 0
 								circle1.material.opacity = 0
+								circle1.scale.x = 1
+								circle1.scale.y = 1
 								// goodFlag = tru
 
 								clearTimeout(timerB)
 								timerB = null
-							}, 100)
+							}, 400)
 						}
 					}
 				} else {
@@ -873,19 +945,21 @@ console.log(a.position.x)
 						circle2.material.opacity = 1
 						textmesh.material.opacity = 1
 						goodFlagC = false
-						console.log('75-2', goodFlagC,timerC)
+						console.log('75-2', goodFlagC, timerC)
 						if (!timerC) {
 							console.log('timec')
 							timerC = setTimeout(() => {
-								console.log(false,textmesh.material.opacity)
+								console.log(false, textmesh.material.opacity)
 								circle2.material.opacity = 0
 								textmesh.material.opacity = 0
-								console.log(false,textmesh.material.opacity)
+								circle2.scale.x = 1
+								circle2.scale.y = 1
+								console.log(false, textmesh.material.opacity)
 								// goodFlag = tru
 
 								clearTimeout(timerC)
 								timerC = null
-							}, 100)
+							}, 400)
 						}
 					}
 				} else {
@@ -914,11 +988,13 @@ console.log(a.position.x)
 								console.log(false, timerD)
 								textmesh.material.opacity = 0
 								circle3.material.opacity = 0
+								circle3.scale.x = 1
+								circle3.scale.y = 1
 								// goodFlag = tru
 
 								clearTimeout(timerD)
 								timerD = null
-							}, 100)
+							}, 400)
 						}
 					}
 				} else {
@@ -1132,7 +1208,7 @@ console.log(a.position.x)
 
 		}
 
-		else if (a.position.y < -27 && a.position.y > -27- newSpeed) {
+		else if (a.position.y < -27 && a.position.y > -27 - newSpeed) {
 			console.log(goodFlagA, goodNum, 85, textmesh.material.opacity)
 			a.material.opacity = 0
 			// textmesh.material.opacity = 0
@@ -1167,7 +1243,7 @@ console.log(a.position.x)
 			// a.material.opacity = 0
 
 			// return
-		} else if (a.position.y < -27- newSpeed && a.position.y >= -27-3*newSpeed) {
+		} else if (a.position.y < -27 - newSpeed && a.position.y >= -27 - 3 * newSpeed) {
 			if (a.position.x == -64) {
 				// console.log(goodFlagA,goodNum,95)
 				if (goodFlagA) {
@@ -1177,7 +1253,7 @@ console.log(a.position.x)
 					setTimeout(() => {
 						missmesh.material.opacity = 0
 						// console.log('为0')
-					}, 50);
+					}, 200);
 				}
 
 			}
@@ -1191,7 +1267,7 @@ console.log(a.position.x)
 					setTimeout(() => {
 						missmesh.material.opacity = 0
 						// console.log('为0')
-					}, 50);
+					}, 200);
 				}
 
 			}
@@ -1205,7 +1281,7 @@ console.log(a.position.x)
 					setTimeout(() => {
 						missmesh.material.opacity = 0
 						// console.log('为0')
-					}, 50);
+					}, 200);
 				}
 
 			}
@@ -1219,7 +1295,7 @@ console.log(a.position.x)
 					setTimeout(() => {
 						missmesh.material.opacity = 0
 						// console.log('为0')
-					}, 50);
+					}, 200);
 				}
 
 			}
@@ -1267,7 +1343,7 @@ console.log(a.position.x)
 			// }
 
 			// return
-		} else if (a.position.y < -27-3*newSpeed&&a.position.y > -27-4*newSpeed) {
+		} else if (a.position.y < -27 - 3 * newSpeed && a.position.y > -27 - 4 * newSpeed) {
 			console.log(textmesh.material.opacity)
 			if (a.position.x == -64) {
 				goodFlagA = true
@@ -1286,7 +1362,7 @@ console.log(a.position.x)
 			// 	goodFlagE = true
 			// }
 
-		} else if (a.position.y < -27-4*newSpeed) {
+		} else if (a.position.y < -27 - 4 * newSpeed) {
 			// console.log('end')
 			// console.log(goodFlagA)
 			return
@@ -1294,8 +1370,8 @@ console.log(a.position.x)
 		// if(a.position.y<-27){
 		// 	a.material.opacity = 0
 		// }
-		a.position.y -=  newSpeed;
-		a.position.z += newSpeed*Math.sqrt(3)
+		a.position.y -= newSpeed;
+		a.position.z += newSpeed * Math.sqrt(3)
 
 	})
 
